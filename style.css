@@ -12,9 +12,11 @@
     --clr-coral: #F74780;    
     --clr-pink: #FFA7C3;
     --clr-white: #fff;
-    --lg-sunrise: linear-gradient (#F02AA6, #FF6F48);
-    --lg-sunset: linear-gradient (#4851FF, #F02AA6)
+    --lg-sunrise: linear-gradient(#F02AA6, #FF6F48);
+    --lg-sunset: linear-gradient(#4851FF, #F02AA6);
+    --lg-background: linear-gradient(#fff, #F0F1FF);
 }
+
 
 /* === RESET === */
 
@@ -33,7 +35,6 @@ html {
     font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-    color: var(--davysgrey);
   }
   
   ol, ul {
@@ -47,4 +48,55 @@ html {
 
 a {
     text-decoration: none;
+}
+
+/* ================= */
+
+body {
+    font-family: var(--ff-primary);
+    color: var(--clr-gray); 
+    padding: 1em;
+
+}
+
+.btn {
+    background-color: var(--clr-navy);
+    padding: 0.625em 1.5em;
+    border-radius: 500em;
+    color: var(--clr-white);
+    font-weight: var(--fw-bold);
+    display: inline-block;
+}
+
+.btn-sunrise {
+    background-image: var(--lg-sunrise);
+    padding: 1em 2em;
+    margin-bottom: 2.875em;
+}
+
+.btn-sunset {
+    background-image: var(--lg-sunset);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.intro-header {
+    font-weight: var(--fw-extrabold);
+    color: var(--clr-navy);
+    font-size: 2.5rem;
+    margin-top: 1em;
+    margin-bottom: 0.625em;
+}
+
+.body {
+    font-size: 1rem;
+    line-height: 1.625em;
+    margin-bottom: 1.5em;
+}
+
+.hero-image {
+    margin-bottom: 4.125em;
 }
