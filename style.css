@@ -12,7 +12,7 @@
     --clr-coral: #F74780;    
     --clr-pink: #FFA7C3;
     --clr-white: #fff;
-    --lg-sunrise: linear-gradient(#F02AA6, #FF6F48);
+    --lg-sunrise: linear-gradient(#FF6F48, #F02AA6);
     --lg-sunset: linear-gradient(#4851FF, #F02AA6);
     --lg-background: linear-gradient(#fff, #F0F1FF);
 }
