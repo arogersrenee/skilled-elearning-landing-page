@@ -80,7 +80,6 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 1em;
-
 }
 
 .intro {
@@ -95,8 +94,13 @@ nav {
     margin-bottom: 0.625em;
 }
 
-.hero-image {
-    max-width: 100%;
+.hero-image-mobile {
+    width: 100%;
+}
+
+.hero-image-tablet,
+.hero-image-desktop {
+    display: none;
 }
 
 .text-body {
@@ -111,9 +115,14 @@ nav {
     padding: 0 1em 2.5em 1em;
 }
 
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 3em;
+}
+
 .card {
     background-color: var(--clr-white);
-    margin-bottom: 2.5em;
     padding: 3.5em 1.75em 2em 1.75em;
     border-radius: 0.625em;
     box-shadow: 0px 25px 50px 0px hsla(233, 92%, 29%, 0.04);
@@ -122,7 +131,7 @@ nav {
 
 .icon {
     position: absolute;
-    left: 10;
+    left: 6%;
     top: -10%;
 }
 
@@ -149,10 +158,6 @@ nav {
     font-size: 1.5em;
 }
 
-.card:last-child {
-    margin-bottom: 0;
-}
-
 footer {
     background-color: var(--clr-navy);
 }
@@ -162,3 +167,83 @@ footer {
     justify-content: space-between;
     padding: 2em 1em;
 }
+
+/* === TABLET (768px) === */
+@media (min-width: 48em) {
+    .wrapper{
+        max-width: 64em;
+        margin: 0 auto;
+    }
+
+    nav {
+        padding: 1.5em;
+    }
+
+    .intro {
+        padding: 0 1.5em;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        margin-bottom: 2em;
+    }
+
+    .hero-left {
+        grid-column: 1/7;
+    }
+
+    .hero-right {
+        grid-column: 7/-1;
+    }
+
+    .hero-image-mobile {
+        display: none;
+    }
+
+    .hero-image-tablet {
+        display: block;
+        width: 100%;
+        /* position: relative;
+        top: -20%;
+        right: -40%;
+        z-index: -1; */
+    }
+
+  .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-flow: 1fr;
+        column-gap: 1.6em;
+        row-gap: 3em;
+    }
+}
+
+/* === DESKTOP (1440px) === */
+@media (min-width: 90em) {
+
+    .hero-image-tablet {
+        display: none;
+    }
+
+    .hero-image-desktop {
+        display: inline-block;
+    }
+
+    .wrapper{
+        max-width: 69.375em;
+        margin: 0 auto;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .intro {
+        margin-bottom: 2em;
+    }
+
+    .intro-header {
+        font-size: 3.5rem;
+        margin-top: 1.25em;
+        margin-bottom: 0.625em;
+    }
+}
+
