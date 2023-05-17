@@ -133,6 +133,7 @@ nav {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 3em;
+    padding: 0 1em;
 }
 
 .card {
